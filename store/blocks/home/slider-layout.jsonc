@@ -1,0 +1,74 @@
+{
+  "slider-layout#home": {
+    "children": [
+      "image#brand1",
+      "image#brand2",
+      "image#brand3",
+      "image#brand4",
+      "image#brand5"
+    ],
+    "props": {
+      "autoplay": {
+        "timeout": 2000,
+        "stopOnHover": true
+      },
+      "showPaginationDots": false,
+      "showNavigationArrows": "always",
+      "fullWidth": true,
+      "itemsPerPage": { "desktop": 1, "tablet": 1, "phone": 1 }
+    }
+  },
+  "image#brand1": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/ee5ada79-b077-47a3-961c-5e4f95f71cad___d52b59e1319d44b1ee62054c97990808.jpg",
+      "blockClass": "carousel-img",
+      "height": "100%",
+      "width": "100%"
+    }
+  },
+  "image#brand2": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/d4d49cfc-102f-413a-ab9e-12c346caed5e___a13caa04d330fcdbcdcc9a92f933905e.jpg",
+      "blockClass": "carousel-img",
+      "height": "100%",
+      "width": "100%"
+    }
+  },
+  "image#brand3": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/3db8a9fa-7d02-4132-be68-52aa81f68747___fa996a289cd9f6207a1bca9cadb169a8.jpg"
+    }
+  },
+  "image#brand4": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/9e5134dc-bf48-4574-b57d-2a9cbd4ef61d___f843170ad78fa9d3d45767f207cc25bd.jpg",
+      "blockClass": "carousel-img"
+    }
+  },
+  "image#brand5": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/18f45fb6-1915-4a39-bd2e-6efd6f1906be___c61c9cfcd5e85b653ce9ca701cc33e22.jpg",
+      "blockClass": "carousel-img"
+    }
+  },
+    "slider-layout#home2": {
+      "children": [
+        "image#brand6"
+      ],
+      "props": {
+        "autoplay": false,
+        "showPaginationDots": false,
+        "showNavigationArrows": "always",
+        "fullWidth": true,
+        "itemsPerPage": { "desktop": 1, "tablet": 1, "phone": 1 }
+      }
+    },
+    "image#brand6": {
+      "props": {
+        "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/97171fed-0eff-4dae-b1d9-db49a62995a4___a5320f7efd4b5522f08a48fce9a0e9a5.jpg",
+        "blockClass": "carousel-img",
+        "height": "100%",
+        "width": "100%"
+      }
+    }
+}

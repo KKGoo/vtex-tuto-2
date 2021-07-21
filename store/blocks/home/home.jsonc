@@ -4,12 +4,77 @@
       "slider-layout#home",
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "flex-layout.row#shelf",
+      "search-result-layout.customQuery#home",
       "slider-layout#home2",
+      "flex-layout.row#shelf",
       "rich-text#question",
+      "image#curve1", 
+      "flex-layout.row#vitrineRow",
+      "image#curve2",
       "rich-text#link",
       "newsletter"
     ]
+  },
+
+  "flex-layout.row#vitrineRow": {
+    "children": ["flex-layout.col#first"],
+    "props": {
+      "width": "100%",
+      "blockClass": "vitrineRow"
+      }
+},
+  "flex-layout.col#first":{
+    "children": [ "flex-layout.row#home1"
+    ]
+  },
+
+  "image#curve1": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/arquivos/curva_arriba-home.jpg",
+      "height": "100%",
+      "width": "100%",
+      "blockClass": "curve"
+     }
+  },
+  "image#curve2": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/arquivos/curva_abajo-home.jpg",
+      "maxWidth": "100%",
+      "height": "100%",
+      "width": "100%"
+    }
+  },
+  "image#wine":{
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/6a0c3d32-8346-47e0-a36f-085767529b0d___cc4aa1f4ce2678f5ddf7e6831209eb24.png",
+      "height": "auto"
+    }
+  }
+  ,
+  "flex-layout.row#home1":{
+    "children": ["image#wine" ,"flex-layout.row#shelf2"]
+  },
+
+  "search-result-layout.customQuery#home":{
+    "props":{
+      "querySchema": {
+        "maxItemsPerPage": 15,
+        "hideUnavailableItems": true,
+        "facetsBehavior": "dynamic",
+        "skusFilter": "FIRST_AVAILABLE",
+        "installmentCriteria": "MAX_WITHOUT_INTEREST",
+        "__unstablePproductOrigin": true,
+        "mapField": "productClusterIds",
+        "queryField": "/155"
+      },
+      "marginTop": 6,
+      "marginBottom": 6,
+      "blockClass": "home"
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"    ]
   },
 
   "list-context.image-list#demo": {
@@ -51,12 +116,41 @@
     "children": ["list-context.product-list#demo1"]
   },
   "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
+    "blocks": ["product-summary.shelf#demo1"],
     "children": ["slider-layout#demo-products"],
     "props": {
-      "orderBy": "OrderByTopSaleDESC"
+      "orderBy": "OrderByTopSaleDESC",
+      "mapField": "productClusterIds",
+      "queryField": "/155"
     }
   },
+  "flex-layout.row#shelf2": {
+    "children": ["list-context.product-list#demo2"]
+  },
+  "list-context.product-list#demo2": {
+    "blocks": ["product-summary.shelf#demo1"],
+    "children": ["slider-layout#demo-products#vitrine"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "mapField": "productClusterIds",
+      "queryField": "/155"
+    }
+  },
+  "slider-layout#demo-products#vitrine": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+      "showPaginationDots": false,
+      "showNavigationArrows": "always"
+    }
+  },
+
   "slider-layout#demo-products": {
     "props": {
       "itemsPerPage": {
@@ -66,7 +160,9 @@
       },
       "infinite": true,
       "fullWidth": false,
-      "blockClass": "shelf"
+      "blockClass": "shelf",
+      "showPaginationDots": false,
+      "showNavigationArrows": "always"
     }
   },
 

@@ -3,6 +3,11 @@
   padding: 0 0.5rem;
 }
 
+.flexRowContent--pricingStore{
+  justify-content: space-between;
+}
+
+
 @media screen and (min-width: 40em) {
   .flexRowContent--menu-link,
   .flexRowContent--main-header {
@@ -77,6 +82,12 @@
 .flexRow--quickviewMainRow {
   display: flex;
   max-height: 100%;
+}
+
+.flexRow--vitrineRow {
+  display: flex;
+  max-height: 100%;
+  background-color: #9EACF0
 }
 
 .flexColChild--quickviewDetails:first-child {

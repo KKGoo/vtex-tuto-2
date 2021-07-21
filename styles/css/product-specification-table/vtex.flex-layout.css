@@ -1,5 +1,6 @@
 .flexRow--productSpecificationGroup:not(:first-child) {
   margin-top: 1.5rem;
+
 }
 
 .flexRow--productSpecificationGroupName {
@@ -17,4 +18,5 @@
 
 .flexRow--productSpecification:nth-child(even) {
   background-color: #f9f9f9;
+
 }
